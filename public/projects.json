@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "name": "Devfolio — Portfolio Website",
+    "image": "https://i.ibb.co/C3QnCpq4/finder.png",
+    "tech": ["React", "TailwindCSS", "Framer Motion"],
+    "description": "A personal developer portfolio to showcase projects, skills, and contact info with elegant animations and responsive design.",
+    "live": "https://devfolio.example.com",
+    "github": "https://github.com/yourname/devfolio-client",
+    "challenges": "Handling responsive animations across devices and optimizing Lighthouse performance score.",
+    "future": "Add blog support, dark/light toggle, and CMS integration for real-time content updates."
+  },
+  {
+    "id": 2,
+    "name": "ShopSwift — E-commerce Platform",
+    "image": "https://i.ibb.co/C3QnCpq4/finder.png",
+    "tech": ["Next.js", "MongoDB", "Stripe", "TailwindCSS"],
+    "description": "A modern e-commerce app with dynamic product listings, shopping cart, Stripe checkout, and user authentication.",
+    "live": "https://shopswift.example.com",
+    "github": "https://github.com/yourname/shopswift-client",
+    "challenges": "Integrating secure Stripe payments and implementing SSR with real-time product updates.",
+    "future": "Add admin dashboard, multi-vendor support, and product recommendation engine using AI."
+  },
+  {
+    "id": 3,
+    "name": "ChatterBox — Real-Time Chat App",
+    "image": "https://i.ibb.co/C3QnCpq4/finder.png",
+    "tech": ["React", "Socket.io", "Express", "Node.js"],
+    "description": "A real-time web chat app with room creation, user login, and instant messaging using sockets.",
+    "live": "https://chatterbox.example.com",
+    "github": "https://github.com/yourname/chatterbox-client",
+    "challenges": "Ensuring reliable socket communication with reconnection handling and user presence updates.",
+    "future": "Implement message history persistence, emoji reactions, and mobile PWA support."
+  }
+]
