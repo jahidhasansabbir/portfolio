@@ -63,15 +63,15 @@ const Contact = () => {
           <div className="space-y-4 text-base sm:text-lg">
             <div className="flex items-center gap-4">
               <MdEmail className="text-[#3B82F6] text-2xl sm:text-3xl" />
-              <span>sabbir.dev@example.com</span>
+              <span>jahidhasansabbir1@gmail.com</span>
             </div>
             <div className="flex items-center gap-4">
               <MdPhone className="text-[#3B82F6] text-2xl sm:text-3xl" />
-              <span>+880 1XXXXXXXXX</span>
+              <span>+880 1892674230</span>
             </div>
             <div className="flex items-center gap-4">
               <FaWhatsapp className="text-[#3B82F6] text-2xl sm:text-3xl" />
-              <span>+880 1XXXXXXXXX</span>
+              <span>+880 1892674230</span>
             </div>
           </div>
         </div>
