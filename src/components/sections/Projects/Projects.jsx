@@ -3,6 +3,7 @@ import { NavLink, useLoaderData } from "react-router";
 
 const Projects = () => {
   const projects = useLoaderData();
+  if (!projects) return <Loading />;
   return (
     <section className="relative bg-[#0D1117] ">
       {/* Glow Background Circles */}
@@ -49,20 +50,11 @@ const Projects = () => {
 
                   {/* Description */}
                   <p className="text-[#F3F4F6] text-sm sm:text-base md:text-lg mb-6 leading-relaxed">
-                    {project.description}
+                    {project.description.split(" ").slice(0, 20).join(" ") +
+                      "..."}
                   </p>
                 </div>
-                {/* Tech badges */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.map((tech, i) => (
-                    <span
-                      key={i}
-                      className="bg-[#1F2937] text-[#60A5FA] text-xs sm:text-sm px-3 py-1 rounded-full border border-[#30363D]"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+
                 {/* Button */}
                 <div>
                   <NavLink

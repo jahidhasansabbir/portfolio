@@ -1,29 +1,30 @@
 import React from "react";
-import { FaGithub, FaLinkedin} from "react-icons/fa";
-import {  FaXTwitter } from "react-icons/fa6";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import Swal from "sweetalert2";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const handleResumeClick = () => {
-  Swal.fire({
-  icon: 'info',
-  title: 'Resume will be added soon',
-  text: 'Thank you for your patience!',
-  confirmButtonColor: '#3B82F6',
-  background: 'rgba(22, 22, 50, 1)', // Darker, higher contrast glass bg
-  color: '#F3F4F6',
-  backdrop: `
+    Swal.fire({
+      icon: "info",
+      title: "Resume will be added soon",
+      text: "Thank you for your patience!",
+      confirmButtonColor: "#3B82F6",
+      background: "rgba(22, 22, 50, 1)", // Darker, higher contrast glass bg
+      color: "#F3F4F6",
+      backdrop: `
     rgba(0, 0, 0, 0.7)
     left top
     no-repeat
   `,
-  customClass: {
-    popup: '  rounded-xl',
-    confirmButton: 'text-white font-semibold px-6 py-2 rounded-md shadow-lg',
-  },
-});
-
-};
+      customClass: {
+        popup: "  rounded-xl",
+        confirmButton:
+          "text-white font-semibold px-6 py-2 rounded-md shadow-lg",
+      },
+    });
+  };
   return (
     <section className="relative bg-[#0D1117] text-[#F3F4F6] flex items-center justify-center">
       {/* Glow Background Circles */}
@@ -38,19 +39,37 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative w-11/12 mx-auto flex flex-col md:flex-row items-center md:gap-12 lg:gap-20">
-        
         {/* Left Text */}
         <div className="flex-1 space-y-6 text-center md:text-left">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#60A5FA] drop-shadow-lg">
-            Hi, I'm <span className="text-[#3B82F6]">Jahid Hasan Sabbir</span>
-          </h1>
+         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#60A5FA]">
+  Hi, I'm{" "}
+  <motion.span
+    className="inline-block text-transparent bg-clip-text"
+    animate={{ backgroundPosition: "200% center" }}
+    transition={{
+      duration: 3,
+      repeat: Infinity,
+      ease: "anticipate",
+    }}
+    style={{
+      backgroundImage:
+        "linear-gradient(90deg, #3B82F6, #60A5FA, #818CF8, #3B82F6)",
+      backgroundSize: "300% 300%",
+      backgroundPosition: "0% center",
+    }}
+  >
+    Jahid Hasan Sabbir
+  </motion.span>
+</h1>
 
           <p className="text-lg sm:text-xl md:text-2xl font-semibold text-[#38BDF8]">
-            Frontend Developer 
+            Frontend Developer
           </p>
 
           <p className="text-base sm:text-lg md:text-xl text-[#9CA3AF] max-w-lg leading-relaxed mx-auto md:mx-0">
-            I build responsive, accessible, and high-performance websites using HTML, CSS, JavaScript, and Tailwind CSS to deliver clean, user-friendly interfaces.
+            I build responsive, accessible, and high-performance websites using
+            HTML, CSS, JavaScript, and Tailwind CSS to deliver clean,
+            user-friendly interfaces.
           </p>
 
           {/* Buttons */}

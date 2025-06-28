@@ -39,6 +39,62 @@ const handleResumeClick = ()=>{
           Home
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to="#"
+          className={({ isActive }) =>
+            `px-3 py-2 rounded-md transition duration-200 ${
+              isActive
+                ? "text-[#60A5FA]"
+                : "text-[#9CA3AF] hover:text-[#60A5FA]"
+            }`
+          }
+        >
+          About
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="#"
+          className={({ isActive }) =>
+            `px-3 py-2 rounded-md transition duration-200 ${
+              isActive
+                ? "text-[#60A5FA]"
+                : "text-[#9CA3AF] hover:text-[#60A5FA]"
+            }`
+          }
+        >
+          Education
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="#"
+          className={({ isActive }) =>
+            `px-3 py-2 rounded-md transition duration-200 ${
+              isActive
+                ? "text-[#60A5FA]"
+                : "text-[#9CA3AF] hover:text-[#60A5FA]"
+            }`
+          }
+        >
+          Project
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="#"
+          className={({ isActive }) =>
+            `px-3 py-2 rounded-md transition duration-200 ${
+              isActive
+                ? "text-[#60A5FA]"
+                : "text-[#9CA3AF] hover:text-[#60A5FA]"
+            }`
+          }
+        >
+          Contact
+        </NavLink>
+      </li>
     </>
   );
 
