@@ -1,15 +1,26 @@
 import React from "react";
 import { NavLink, useLoaderData } from "react-router";
 
-
 const Projects = () => {
-    const projects = useLoaderData()
+  const projects = useLoaderData();
   return (
-    <section className="w-full bg-[#0D1117] py-24 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section className="relative bg-[#0D1117] ">
+      {/* Glow Background Circles */}
+      <div
+        className="absolute -top-20 -left-20 w-48 sm:w-72 md:w-96 h-48 sm:h-72 md:h-96 rounded-full bg-[#60a5fa85] opacity-20 blur-3xl"
+        aria-hidden="true"
+      />
+      <div
+        className="absolute bottom-32 sm:bottom-40 right-8 sm:right-16 w-40 sm:w-56 md:w-72 h-40 sm:h-56 md:h-72 rounded-full bg-[#3b83f66c] opacity-30 blur-2xl"
+        aria-hidden="true"
+      />
+
+      <div className="w-11/12 mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-[#3B82F6] mb-2">Projects</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#3B82F6] mb-2">
+            Projects
+          </h2>
           <div className="w-20 h-1 bg-[#60A5FA] mx-auto rounded"></div>
         </div>
 
@@ -18,7 +29,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col md:flex-row bg-[#161B22] border border-[#30363D] rounded-2xl overflow-hidden shadow-lg transition "
+              className="flex flex-col md:flex-row bg-[#161B22]/60 backdrop-blur-md border border-[#30363D] rounded-2xl overflow-hidden shadow-lg transition"
             >
               {/* Image */}
               <div className="md:w-1/2 w-full">
@@ -30,14 +41,14 @@ const Projects = () => {
               </div>
 
               {/* Content */}
-              <div className="md:w-1/2 w-full p-6 flex flex-col justify-between">
+              <div className="md:w-1/2 w-full p-6 flex flex-col justify-between md:pl-10 space-y-6 md:space-y-0">
                 <div>
-                  <h3 className="text-2xl font-semibold text-[#F3F4F6] mb-3">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#F3F4F6] mb-3">
                     {project.name}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-[#F3F4F6] text-base mb-6">
+                  <p className="text-[#F3F4F6] text-sm sm:text-base md:text-lg mb-6 leading-relaxed">
                     {project.description}
                   </p>
                 </div>
@@ -46,7 +57,7 @@ const Projects = () => {
                   {project.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="bg-[#1F2937] text-[#60A5FA] text-sm px-3 py-1 rounded-full border border-[#30363D]"
+                      className="bg-[#1F2937] text-[#60A5FA] text-xs sm:text-sm px-3 py-1 rounded-full border border-[#30363D]"
                     >
                       {tech}
                     </span>
@@ -56,7 +67,7 @@ const Projects = () => {
                 <div>
                   <NavLink
                     to={`/details/${project.id}`}
-                    className="inline-block bg-[#3B82F6] hover:bg-[#2563EB] text-[#F3F4F6] font-medium px-5 py-2 rounded-lg transition-all duration-200"
+                    className="inline-block bg-[#3B82F6] hover:bg-[#2563EB] text-[#F3F4F6] font-medium px-5 py-2 rounded-lg transition-all duration-200 text-sm sm:text-base"
                   >
                     View Details
                   </NavLink>

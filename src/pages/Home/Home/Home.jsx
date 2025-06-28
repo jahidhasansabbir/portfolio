@@ -8,13 +8,13 @@ import Projects from '../../../components/sections/Projects/Projects';
 
 const Home = () => {
   return (
-    <div className="bg-[#0D1117] text-[#F3F4F6]">
-      <Hero></Hero>
-      <About></About>
-      <Skills></Skills>
-      <Education></Education>
-      <Projects></Projects>
-      <Contact></Contact>
+    <div className="bg-[#0D1117] text-[#F3F4F6] my-10 sm:my-12 md:my-16 space-y-20 sm:space-y-24 md:space-y-32">
+      <Hero />
+      <About />
+      <Skills />
+      <Education />
+      <Projects />
+      <Contact />
     </div>
   );
 };

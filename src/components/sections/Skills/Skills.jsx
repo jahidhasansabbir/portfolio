@@ -31,9 +31,12 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section className="w-11/12 mx-auto bg-[#0D1117]">
+    <section className="relative w-11/12 mx-auto bg-[#0D1117]">
+    
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-[#3B82F6] mb-2">My Skills</h2>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3B82F6] mb-2">
+          My Skills
+        </h2>
         <div className="w-20 h-1 bg-[#60A5FA] rounded mx-auto"></div>
       </div>
 
@@ -41,10 +44,10 @@ const Skills = () => {
         {skills.map(({ name, icon: Icon, color }, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center cursor-default bg-[#161B22]/75 border-2 border-[#30363D] rounded-xl p-6 transition-transform duration-300 hover:scale-105"
+            className="flex flex-col items-center justify-center cursor-default bg-[#161B22]/75 border-2 border-[#30363D] rounded-xl p-4 sm:p-6 transition-transform duration-300 hover:scale-105"
           >
-            <Icon style={{ color }} className="text-5xl mb-3" />
-            <p className="text-[#F3F4F6] text-lg font-semibold text-center">
+            <Icon style={{ color }} className="text-3xl sm:text-4xl md:text-5xl mb-3" />
+            <p className="text-sm sm:text-base md:text-lg text-[#F3F4F6] font-semibold text-center">
               {name}
             </p>
           </div>

@@ -6,11 +6,11 @@ const Hero = () => {
     <section className="relative bg-[#0D1117] text-[#F3F4F6] flex items-center justify-center">
       {/* Glow Background Circles */}
       <div
-        className="absolute -top-20 -left-20 w-96 h-96 rounded-full bg-[#60A5FA] opacity-20 blur-3xl"
+        className="absolute -top-20 -left-20 w-96 h-96 rounded-full bg-[#60a5fa7f] opacity-20 blur-3xl"
         aria-hidden="true"
       />
       <div
-        className="absolute bottom-0 right-0 w-72 h-72 rounded-full bg-[#3B82F6] opacity-30 blur-2xl"
+        className="absolute bottom-0 right-0 w-72 h-72 rounded-full bg-[#3b83f675] opacity-30 blur-2xl"
         aria-hidden="true"
       />
 
