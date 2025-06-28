@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink, useLoaderData } from "react-router";
+import { NavLink, useLoaderData } from "react-router";
 
 
 const Projects = () => {
@@ -54,12 +54,12 @@ const Projects = () => {
                 </div>
                 {/* Button */}
                 <div>
-                  <Link
+                  <NavLink
                     to={`/details/${project.id}`}
                     className="inline-block bg-[#3B82F6] hover:bg-[#2563EB] text-[#F3F4F6] font-medium px-5 py-2 rounded-lg transition-all duration-200"
                   >
                     View Details
-                  </Link>
+                  </NavLink>
                 </div>
               </div>
             </div>

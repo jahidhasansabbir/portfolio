@@ -15,25 +15,24 @@ const Hero = () => {
       />
 
       {/* Content */}
-      <div className="relative w-11/12 mx-auto flex flex-col md:flex-row items-center gap-12">
+      <div className="relative w-11/12 mx-auto flex flex-col md:flex-row items-center md:gap-12 lg:gap-20">
         
         {/* Left Text */}
-        <div className="flex-1 space-y-6">
-          <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-[#60A5FA] drop-shadow-lg">
+        <div className="flex-1 space-y-6 text-center md:text-left">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#60A5FA] drop-shadow-lg">
             Hi, I'm <span className="text-[#3B82F6]">[Your Name]</span>
           </h1>
 
-          <p className="text-xl font-semibold text-[#38BDF8]">
+          <p className="text-lg sm:text-xl md:text-2xl font-semibold text-[#38BDF8]">
             Frontend Developer & UI/UX Enthusiast
           </p>
 
-          <p className="text-lg md:text-xl text-[#9CA3AF] max-w-lg leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-[#9CA3AF] max-w-lg leading-relaxed mx-auto md:mx-0">
             I build sleek, neon-inspired web applications with React and modern UI/UX principles.
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-wrap gap-4 items-center pt-4">
-            {/* Resume Button */}
+          <div className="flex flex-wrap justify-center md:justify-start gap-4 items-center pt-4">
             <a
               href="#"
               download
@@ -44,7 +43,7 @@ const Hero = () => {
             </a>
 
             {/* Social Links */}
-            <div className="flex gap-5 text-[#60A5FA] text-2xl">
+            <div className="flex gap-5 text-[#60A5FA] text-xl sm:text-2xl">
               <a
                 href="https://github.com/yourusername"
                 target="_blank"
@@ -86,11 +85,11 @@ const Hero = () => {
         </div>
 
         {/* Right Image */}
-        <div className="flex-1 flex justify-center md:justify-end">
+        <div className="flex-1 flex justify-center md:justify-end mt-10 md:mt-0">
           <img
             src="https://i.ibb.co/whq0X7wS/img-1-1751098726972.jpg"
             alt="Your portrait"
-            className="rounded-xl shadow-2xl ring-4 ring-[#60A5FA] max-w-xs md:max-w-sm object-cover"
+            className="rounded-xl shadow-2xl ring-4 ring-[#60A5FA] w-full sm:w-52 md:w-64 lg:w-80 object-cover"
           />
         </div>
       </div>
