@@ -11,7 +11,7 @@ const Education = () => {
       </div>
 
       <div className="max-w-3xl mx-auto">
-        <article className="bg-[#161B22]/80 border border-[#30363D] rounded-2xl p-10 mb-10 shadow-[0_0_25px_rgba(59,130,246,0.2)]">
+        <article className="bg-[#161B22]/80 border border-[#30363D] rounded-2xl p-10 shadow-[0_0_25px_rgba(59,130,246,0.2)]">
           <h3 className="text-3xl font-semibold text-[#F3F4F6] mb-2 leading-tight">
             Bachelor of Science in Electrical and Electronic Engineering
           </h3>

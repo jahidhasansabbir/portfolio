@@ -2,19 +2,19 @@ import React from "react";
 
 const About = () => {
   return (
-   <section className="relative ">
+   <section className="relative w-11/12 mx-auto">
     {/* Glow Background Circles */}
-      <div
-        className="absolute top-50 left-20 w-96 h-96 rounded-full bg-[#60A5FA] opacity-20 blur-3xl"
+      {/* <div
+        className="absolute -top-50 -left-20 w-96 h-96 rounded-full bg-[#60A5FA] opacity-20 blur-3xl"
         aria-hidden="true"
       />
       <div
-        className="absolute bottom-20 right-50 w-72 h-72 rounded-full bg-[#3B82F6] opacity-30 blur-2xl"
+        className="absolute -bottom-20 -right-50 w-72 h-72 rounded-full bg-[#3B82F6] opacity-30 blur-2xl"
         aria-hidden="true"
-      />
+      /> */}
 
 
-     <div className="w-11/12 mx-auto bg-[#0D1117] flex justify-center items-center">
+     <div className=" bg-[#0D1117] flex justify-center items-center">
       <div className=" w-full bg-[#161B22]/60 backdrop-blur-md border border-[#30363D] rounded-2xl shadow-lg p-10 transition duration-300 ">
         {/* Section Heading */}
         <div className="mb-8 text-center">
