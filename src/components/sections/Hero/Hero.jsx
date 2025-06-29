@@ -41,26 +41,32 @@ const Hero = () => {
       <div className="relative w-11/12 mx-auto flex flex-col md:flex-row items-center md:gap-12 lg:gap-20">
         {/* Left Text */}
         <div className="flex-1 space-y-6 text-center md:text-left">
-         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#60A5FA]">
+       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#60A5FA]">
   Hi, I'm{" "}
   <motion.span
     className="inline-block text-transparent bg-clip-text"
-    animate={{ backgroundPosition: "200% center" }}
+    animate={{ backgroundPositionX: ["0%", "100%", "0%"] }}
     transition={{
-      duration: 3,
+      duration: 1,
       repeat: Infinity,
-      ease: "anticipate",
+      ease: "easeInOut",
     }}
     style={{
       backgroundImage:
-        "linear-gradient(90deg, #3B82F6, #60A5FA, #818CF8, #3B82F6)",
-      backgroundSize: "300% 300%",
+        "linear-gradient(270deg, #60A5FA, #38BDF8, #7DB0FC, #818CF8, #A78BFA, #C084FC, #A78BFA, #60A5FA)",
+      backgroundSize: "1000% 100%",
       backgroundPosition: "0% center",
+      WebkitBackgroundClip: "text",
+      backgroundClip: "text",
+      color: "transparent",
     }}
   >
     Jahid Hasan Sabbir
   </motion.span>
 </h1>
+
+
+
 
           <p className="text-lg sm:text-xl md:text-2xl font-semibold text-[#38BDF8]">
             Frontend Developer

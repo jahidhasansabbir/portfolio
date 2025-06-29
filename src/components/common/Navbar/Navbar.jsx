@@ -183,7 +183,7 @@ const scrollToSection = (id) => {
         }`
       }
     >
-              <img src={logo} alt="" className="w-12 h-12" />
+              <img src={logo} alt="" className="w-full h-8" />
     </NavLink>
             
           </div>

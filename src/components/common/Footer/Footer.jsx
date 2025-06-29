@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer footer-horizontal footer-center bg-[#161B22] text-[#F3F4F6] rounded p-10 border-t border-[#30363D]">
       {/* Logo & Info */}
       <div className="flex flex-col items-center gap-2">
-        <img src="/logo.png" alt="Logo" className="w-12 h-12 rounded-full shadow-md" />
+        <img src="/logo.png" alt="Logo" className="w-full h-14 rounded-full shadow-md" />
         <h2 className="text-lg font-semibold text-[#60A5FA]">Jahid Hasan Sabbir</h2>
         <p className="text-sm text-[#9CA3AF]">Frontend Web Developer</p>
       </div>

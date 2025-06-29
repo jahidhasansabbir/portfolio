@@ -12,7 +12,7 @@ import Projects from '../../../components/sections/Projects/Projects';
 const Home = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 1500,
       easing: 'ease-out-cubic',
       once: false,   // allow animation every scroll
       mirror: false,
