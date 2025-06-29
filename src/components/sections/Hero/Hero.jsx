@@ -45,15 +45,15 @@ const Hero = () => {
   Hi, I'm{" "}
   <motion.span
     className="inline-block text-transparent bg-clip-text"
-    animate={{ backgroundPositionX: ["0%", "100%", "0%"] }}
+    animate={{ backgroundPositionX: ["0%", "25%","50%", "75%","100%"] }}
     transition={{
-      duration: 1,
+      duration: 6,
       repeat: Infinity,
       ease: "easeInOut",
     }}
     style={{
       backgroundImage:
-        "linear-gradient(270deg, #60A5FA, #38BDF8, #7DB0FC, #818CF8, #A78BFA, #C084FC, #A78BFA, #60A5FA)",
+        "linear-gradient(270deg, #60A5FA, #385DF8, #7DB0FC, #818CF8, #A78BFA, #385DF8, #A78BFA, #60A5FA)",
       backgroundSize: "1000% 100%",
       backgroundPosition: "0% center",
       WebkitBackgroundClip: "text",
