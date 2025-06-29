@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <section className="relative w-11/12 mx-auto">
+    <section   className="relative w-11/12 mx-auto">
       {/* Glow Background Circles */}
       <div
         className="absolute -top-20 -left-20 w-96 h-96 rounded-full bg-[#60a5fa93] opacity-20 blur-3xl"

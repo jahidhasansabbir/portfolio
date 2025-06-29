@@ -1,11 +1,21 @@
-import React from "react";
-import { NavLink, useLoaderData } from "react-router";
+import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router";
+import Loading from "../../common/Loading/Loading";
 
 const Projects = () => {
-  const projects = useLoaderData();
+  const [data, setData] = useState(null);
+  
+    useEffect(() => {
+      fetch("/projects.json")
+        .then((res) => res.json())
+        .then((data) => setData(data));
+    }, []);
+
+
+  const projects = data;
   if (!projects) return <Loading />;
   return (
-    <section className="relative bg-[#0D1117] ">
+    <section  className="relative bg-[#0D1117] ">
       {/* Glow Background Circles */}
       <div
         className="absolute -top-20 -left-20 w-48 sm:w-72 md:w-96 h-48 sm:h-72 md:h-96 rounded-full bg-[#60a5fa85] opacity-20 blur-3xl"

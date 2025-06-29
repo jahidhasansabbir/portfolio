@@ -1,105 +1,140 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router";
 import Swal from "sweetalert2";
+import logo from "../../../../public/logo.png";
 
 const Navbar = () => {
-const handleResumeClick = ()=>{
-  Swal.fire({
-    icon: 'info',
-    title: 'Resume will be added soon',
-    text: 'Thank you for your patience!',
-    confirmButtonColor: '#3B82F6',
-    background: 'rgba(22, 22, 50, 1)', // Darker, higher contrast glass bg
-    color: '#F3F4F6',
-    backdrop: `
+  const [activeSection, setActiveSection] = useState("hero");
+
+const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const yOffset = -96; // navbar height offset
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+      setActiveSection(id);
+    }
+  };
+  const handleResumeClick = () => {
+    Swal.fire({
+      icon: "info",
+      title: "Resume will be added soon",
+      text: "Thank you for your patience!",
+      confirmButtonColor: "#3B82F6",
+      background: "rgba(22, 22, 50, 1)", // Darker, higher contrast glass bg
+      color: "#F3F4F6",
+      backdrop: `
       rgba(0, 0, 0, 0.7)
       left top
       no-repeat
     `,
-    customClass: {
-      popup: '  rounded-xl',
-      confirmButton: 'text-white font-semibold px-6 py-2 rounded-md shadow-lg',
-    },
-  });
-}
-  
+      customClass: {
+        popup: "  rounded-xl",
+        confirmButton:
+          "text-white font-semibold px-6 py-2 rounded-md shadow-lg",
+      },
+    });
+  };
+
   const links = (
     <>
-      <li>
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            `px-3 py-2 rounded-md transition duration-200 ${
-              isActive
-                ? "text-[#60A5FA]"
-                : "text-[#9CA3AF] hover:text-[#60A5FA]"
-            }`
-          }
-        >
-          Home
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="#"
-          className={({ isActive }) =>
-            `px-3 py-2 rounded-md transition duration-200 ${
-              isActive
-                ? "text-[#60A5FA]"
-                : "text-[#9CA3AF] hover:text-[#60A5FA]"
-            }`
-          }
-        >
-          About
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="#"
-          className={({ isActive }) =>
-            `px-3 py-2 rounded-md transition duration-200 ${
-              isActive
-                ? "text-[#60A5FA]"
-                : "text-[#9CA3AF] hover:text-[#60A5FA]"
-            }`
-          }
-        >
-          Education
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="#"
-          className={({ isActive }) =>
-            `px-3 py-2 rounded-md transition duration-200 ${
-              isActive
-                ? "text-[#60A5FA]"
-                : "text-[#9CA3AF] hover:text-[#60A5FA]"
-            }`
-          }
-        >
-          Project
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="#"
-          className={({ isActive }) =>
-            `px-3 py-2 rounded-md transition duration-200 ${
-              isActive
-                ? "text-[#60A5FA]"
-                : "text-[#9CA3AF] hover:text-[#60A5FA]"
-            }`
-          }
-        >
-          Contact
-        </NavLink>
-      </li>
-    </>
+  <li>
+    <NavLink
+      to="/?section=hero"
+      onClick={() => scrollToSection("hero")}
+      className={() =>
+        `px-3 py-2 rounded-md transition duration-200 ${
+          activeSection === "hero"
+            ? "text-[#60A5FA]"
+            : "text-[#fcfcfc] hover:text-[#60A5FA]"
+        }`
+      }
+    >
+      Home
+    </NavLink>
+  </li>
+  <li>
+    <NavLink
+      to="/?section=about"
+      onClick={() => scrollToSection("about")}
+      className={() =>
+        `px-3 py-2 rounded-md transition duration-200 ${
+          activeSection === "about"
+            ? "text-[#60A5FA]"
+            : "text-[#fcfcfc] hover:text-[#60A5FA]"
+        }`
+      }
+    >
+      About
+    </NavLink>
+  </li>
+  <li>
+    <NavLink
+      to="/?section=skills"
+      onClick={() => scrollToSection("skills")}
+      className={() =>
+        `px-3 py-2 rounded-md transition duration-200 ${
+          activeSection === "skills"
+            ? "text-[#60A5FA]"
+            : "text-[#fcfcfc] hover:text-[#60A5FA]"
+        }`
+      }
+    >
+      Skills
+    </NavLink>
+  </li>
+  <li>
+    <NavLink
+      to="/?section=education"
+      onClick={() => scrollToSection("education")}
+      className={() =>
+        `px-3 py-2 rounded-md transition duration-200 ${
+          activeSection === "education"
+            ? "text-[#60A5FA]"
+            : "text-[#fcfcfc] hover:text-[#60A5FA]"
+        }`
+      }
+    >
+      Education
+    </NavLink>
+  </li>
+  <li>
+    <NavLink
+      to="/?section=projects"
+      onClick={() => scrollToSection("projects")}
+      className={() =>
+        `px-3 py-2 rounded-md transition duration-200 ${
+          activeSection === "projects"
+            ? "text-[#60A5FA]"
+            : "text-[#fcfcfc] hover:text-[#60A5FA]"
+        }`
+      }
+    >
+      Project
+    </NavLink>
+  </li>
+  <li>
+    <NavLink
+      to="/?section=contact"
+      onClick={() => scrollToSection("contact")}
+      className={() =>
+        `px-3 py-2 rounded-md transition duration-200 ${
+          activeSection === "contact"
+            ? "text-[#60A5FA]"
+            : "text-[#fcfcfc] hover:text-[#60A5FA]"
+        }`
+      }
+    >
+      Contact
+    </NavLink>
+  </li>
+</>
+
+
   );
 
   return (
-    <div className="border-b bg-[#0D111780] backdrop-blur-sm z-50 sticky top-0 border-[#30363D] shadow-sm">
+    <div className="border-b bg-[#0D111780] backdrop-blur-lg z-50 sticky top-0 border-[#30363D] shadow-sm">
       <nav className="w-11/12 mx-auto text-[#F3F4F6] ">
         <div className=" mx-auto flex items-center justify-between py-3">
           {/* Left: Logo + Dropdown */}
@@ -134,9 +169,23 @@ const handleResumeClick = ()=>{
             </div>
 
             {/* Logo */}
-            <a className="text-xl font-bold text-[#60A5FA] tracking-tight">
-              NeonBrand
-            </a>
+            {/* <a className="text-xl font-bold text-[#60A5FA] tracking-tight">
+              <img src={logo} alt="" className="w-12 h-12" />
+            </a> */}
+            <NavLink
+      to="/?section=hero"
+      onClick={() => scrollToSection("hero")}
+      className={() =>
+        ` rounded-md transition duration-200 ${
+          activeSection === "hero"
+            ? "text-[#60A5FA]"
+            : "text-[#fcfcfc] hover:text-[#60A5FA]"
+        }`
+      }
+    >
+              <img src={logo} alt="" className="w-12 h-12" />
+    </NavLink>
+            
           </div>
 
           {/* Center: Desktop Links */}
@@ -147,7 +196,7 @@ const handleResumeClick = ()=>{
           {/* Right: Resume Button */}
           <div>
             <button
-            onClick={handleResumeClick}
+              onClick={handleResumeClick}
               className="bg-[#3B82F6] hover:bg-[#2563EB] text-white px-4 py-2 rounded-md font-medium shadow-md transition duration-300"
             >
               Resume

@@ -19,7 +19,7 @@ const Details = () => {
 
 
   return (
-    <section className="min-h-screen bg-[#0D1117] text-[#F3F4F6] py-8 md:py-8 w-11/12 mx-auto">
+    <section className=" bg-[#0D1117] text-[#F3F4F6] py-8 md:py-8 w-11/12 mx-auto">
       <div className=" mx-auto space-y-12">
         {/* Title */}
         <div className="text-center">

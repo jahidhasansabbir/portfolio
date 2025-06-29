@@ -34,7 +34,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="relative w-11/12 mx-auto bg-[#0D1117] ">
+    <section  className=" relative w-11/12 mx-auto bg-[#0D1117] ">
       {/* Toast Container */}
       <ToastContainer />
 

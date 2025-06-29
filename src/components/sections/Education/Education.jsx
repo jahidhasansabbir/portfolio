@@ -2,7 +2,7 @@ import React from "react";
 
 const Education = () => {
   return (
-    <section className="relative w-full bg-[#0D1117] rounded-xl shadow-lg overflow-hidden ">
+    <section  className=" relative w-full bg-[#0D1117] rounded-xl shadow-lg overflow-hidden ">
       {/* Glow Background Circle - Positioned top-right, won't affect layout */}
       <div
         className="pointer-events-none absolute top-20 right-10 w-50 h-50 rounded-full bg-[#60A5FA] opacity-20 blur-3xl z-0"

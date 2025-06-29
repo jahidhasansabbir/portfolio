@@ -1,38 +1,43 @@
 import React from "react";
+import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6"; // modern icons
 
 const Footer = () => {
   return (
     <footer className="footer footer-horizontal footer-center bg-[#161B22] text-[#F3F4F6] rounded p-10 border-t border-[#30363D]">
-      <nav className="grid grid-flow-col gap-4">
-        <a className="link link-hover text-[#60A5FA] hover:text-[#3B82F6]">About us</a>
-        <a className="link link-hover text-[#60A5FA] hover:text-[#3B82F6]">Contact</a>
-        <a className="link link-hover text-[#60A5FA] hover:text-[#3B82F6]">Jobs</a>
-        <a className="link link-hover text-[#60A5FA] hover:text-[#3B82F6]">Press kit</a>
+      {/* Logo & Info */}
+      <div className="flex flex-col items-center gap-2">
+        <img src="/logo.png" alt="Logo" className="w-12 h-12 rounded-full shadow-md" />
+        <h2 className="text-lg font-semibold text-[#60A5FA]">Jahid Hasan Sabbir</h2>
+        <p className="text-sm text-[#9CA3AF]">Frontend Web Developer</p>
+      </div>
+
+      {/* Social Icons */}
+      <nav className=" flex gap-6">
+        <a
+          href="https://github.com/jahidhasansabbir"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#60A5FA] hover:text-[#3B82F6] text-xl"
+        >
+          <FaGithub />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/jahid-hasan-sabbir-035ab2290/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#60A5FA] hover:text-[#3B82F6] text-xl"
+        >
+          <FaLinkedin />
+        </a>
+        <a
+          href="https://x.com/jahid_sabbir1"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#60A5FA] hover:text-[#3B82F6] text-xl"
+        >
+          <FaXTwitter />
+        </a>
       </nav>
-      <nav>
-        <div className="grid grid-flow-col gap-4">
-          {/* <a className="text-[#60A5FA] hover:text-[#3B82F6]">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current">
-              <path d="M24 4.557c-.883.392-1.832.656-2.828.775..."></path>
-            </svg>
-          </a> */}
-          {/* <a className="text-[#60A5FA] hover:text-[#3B82F6]">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current">
-              <path d="M19.615 3.184c-3.604-.246-11.631-.245..."></path>
-            </svg>
-          </a> */}
-          {/* <a className="text-[#60A5FA] hover:text-[#3B82F6]">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current">
-              <path d="M9 8h-3v4h3v12h5v-12h3.642l..."></path>
-            </svg>
-          </a> */}
-        </div>
-      </nav>
-      <aside>
-        <p className="text-[#9CA3AF]">
-          Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd
-        </p>
-      </aside>
     </footer>
   );
 };

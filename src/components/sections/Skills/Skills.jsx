@@ -31,7 +31,7 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section className="relative w-11/12 mx-auto bg-[#0D1117]">
+    <section  className="relative w-11/12 mx-auto bg-[#0D1117]">
     
       <div className="text-center mb-12">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3B82F6] mb-2">
